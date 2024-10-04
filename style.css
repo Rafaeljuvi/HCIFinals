@@ -1,0 +1,853 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Pamparay";
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Pamparay";
+    src: url(/font/Pamparay.otf);
+}
+@font-face{
+    font-family: "Shred";
+    src: url(/font/Shred.ttf);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: yellow;
+    transition: 0.2s;
+    transition-delay: 0.1s;
+}
+body{
+    margin-top: 10vh;
+    background-color: rgb(20, 20, 20);
+}
+header{
+    height: 10vh;
+    margin-top: -10vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+header p{
+    font-size: 4rem;
+    margin: 2vw;
+    color: white;
+    font-family: "Shred";
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+header li{
+    padding: 2vw;
+}
+.home-banner{
+    height: 90vh;
+    background-image: url(/image/Home-banner.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.home-banner p{
+    color: white;
+    font-size: 3rem;
+    width: 50%;
+    height: 20%;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: 2vh;
+}
+.home-banner .button{
+    color: white;
+    margin: 2vh;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 999px;
+}
+.funfact-container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.funfact-container table{
+    color: white;
+}
+.funfact-container .td-text{
+    font-size: 1.5rem;
+    padding: 1vw;
+    width: 25vh;
+    text-align: center;
+}
+.funfact-container tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.funfact-container td{
+   margin: 0 4vw;
+}
+.funfact-container img{
+    height: 25vh;
+}
+.funfact-container p{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 7vh;
+}
+.content-banner{
+    height: 50vh;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+#tutorial-banner{
+    flex-direction: row-reverse;
+}
+#tutorial-banner img{
+    margin: 0 10vw;
+    height: 100%;
+}
+#tutorial-banner .content-banner-desc{
+    text-align: right;
+    align-items: end;
+}
+#recipe-banner{
+    margin: 0 5vw;
+}
+.content-banner img{
+    height: 90%;
+}
+.content-banner-desc{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1vw;
+}
+.content-banner h1{
+    color: white;
+    font-size: 2.5rem;
+    margin: 0.5vw 0;
+}
+.content-banner p{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5vw 0;
+}
+.content-banner .button{
+    color: black;
+    width: 125px;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 0.5vw 0;
+}
+.tutorial-banner{
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+#chest-banner{
+    background-image: url(/image/chest-banner.png);
+}
+#back-banner{
+    background-image: url(/image/back-banner.jpg);
+}
+#shoulder-banner{
+    background-image: url(/image/shoulder-banner.jpg);
+}
+#leg-banner{
+    background-image: url(/image/leg-banner.jpg);
+}
+.tutorial-banner p{
+    color: white;
+    width: 60%;
+    height: 50%;
+    font-size: 2rem;
+    text-align: center;
+}
+.tutorial-text{
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.tutorial-title{
+    width: 30%;
+    margin: 0 3vw;
+    color: white;
+    font-size: 2rem;
+    border-bottom: 5px solid white;
+}
+.tutorial-container{
+    height: 120vh;
+}
+.tutorial-container tr{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.tutorial-container table{
+    margin-top: 9vh;
+    width: 100%;
+}
+.tutorial-container table img{
+    width: 8vw;
+    height: 8vw;;
+    background-color: white;
+}
+.tutorial-container td{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 10vw;
+    cursor: pointer;
+}
+.tutorial-desc-container{
+    margin: 10vh 3vw;
+    height: 50vh;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+}
+#backBTN, #nextBTN{
+    height: 5vh;
+    cursor: pointer;
+}
+.tutorial-scroll{
+    display: flex;    
+    overflow-x: scroll; 
+    align-items: center;
+}
+.tutorial-scroll div{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.tutorial-scroll p{
+    width: 40vw;
+    font-size: 1.5rem;
+    margin: 5vw;
+}
+.tutorial-scroll ol{
+    width: 45vw;
+    font-size: 1.2rem;
+    margin-left: 6vw;
+
+}
+.tutorial-scroll img{
+    width: 26vw;
+    height: 35vh;
+    margin: 7vw;
+
+}
+.tutorial-scroll iframe{
+    width: 35vw;
+    margin: 5vw;
+}
+.tutorial-scroll::-webkit-scrollbar{
+    display: none;
+}
+#tutorial-content-2{
+    display: none;
+}
+#tutorial-content-3{
+    display: none;
+}
+#tutorial-content-4{
+    display: none;
+}
+
+.tutorial-icon-1{
+    text-decoration: underline;
+}
+
+td:hover p{
+    text-decoration: underline;
+}
+
+.tutorials-banner{
+    background-image: url(/image/tutorials-banner.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.tutorials-banner p{
+    width: 40%;
+    color: white;
+    font-size: 2rem;
+    margin: 5vw;
+}
+.tutorials-text {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tutorials-text p{
+    color: white;
+    padding: 2vh 0;
+    margin: 0 2vw;
+    font-size: 2rem;
+    border-bottom: white solid 2px;
+}
+.tutorials-container{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.tutorials-container .tutorial-img{
+    width: 80%;
+    height: 22%;
+    background-position: center;
+    background-size: cover;
+    font-size: 4rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.filter{
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.filter:hover{
+    background-color: rgb(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: ease-in-out .2s;
+}
+
+
+
+#chest-tutorials{
+    background-image: url(/image/chest-tutorials.jpg);
+}
+#back-tutorials{
+    background-image: url(/image/back-tutorials.jpg);
+}
+#shoulder-tutorials{
+    background-image: url(/image/shoulder-tutorials.jpg);
+}
+#leg-tutorials{
+    background-image: url(/image/leg-tutorials.webp);
+}
+
+.recipe-banner{
+    height: 40vh;
+    background-image: url(/image/cover_menu_recipe.jpg);
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.recipe-banner p{
+    color: white;
+    width: 60%;
+    height: 50%;
+    font-size: 3rem;
+    text-align: center;
+}
+.recipe-text{
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    border-bottom: 5px solid white; 
+    
+}
+
+.recipe-container{
+    height: 375vh;    
+}
+
+
+.recipe-container-item{
+    margin: 0 5vw;
+    height: 90vh;
+    border: 5px solid white;
+    margin-top: 100px;
+    background-position: center;
+    font-size: 2.5rem;
+    color: white;
+    background-size: cover;
+}
+#bulking_menu{
+    background-image: url(/image/menu_bulking.jpg);
+}
+#cutting_menu{
+    background-image: url(/image/menu_cutting.png);
+}
+#maintain_menu{
+    background-image: url(/image/menu_maintain.png);
+}
+.recipe-filter{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recipe-filter:hover{
+    background-color: rgb(0, 0, 0, 0.7);
+    text-decoration: underline;
+    transition: ease-in-out .2s;
+}
+.recipe-filter h1{
+    margin: 2vw;
+}
+.recipe-def {
+    margin: 2vw;
+    display: flex;
+    align-items: end;
+}
+
+.cutting-banner{
+    height: 50vh;
+    background-image: url(/image/cutting_cover.jpg);
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.cutting-banner p{
+    color: white;
+    width: 20%;
+    height: 30%;
+    font-size: 5rem;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+
+.cutting-container{
+    height: 360vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cutting-text{
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    border-bottom: 5px solid white; 
+        
+}
+.food-container{
+    margin: 0 3vw;
+    height: 60vh;
+    border: 5px solid white;
+    display: flex;
+    color: white;
+    margin-top: 100px;
+    font-size: 2.5rem;
+    padding-top: 40px;
+    padding-left: 40px;
+
+}
+
+.left-cutting{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-cutting iframe{
+    height: 90%;
+    width: 100%;
+    margin-top: -4vh;
+}
+
+.food-image{
+    height: 80%;
+    width: 100%;
+}
+
+.right-cutting{
+    padding-left: 8%;
+    padding-right: 5%;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top-cutting{
+    width: 100%;
+    border-bottom: 5px solid white;
+}
+
+.food-def{
+    font-size: 1.3rem;
+    padding-top: 5%;
+}
+
+h3{
+    padding-top: 5%;
+    padding-bottom: 5%
+}
+
+.bulking-banner{
+    height: 50vh;
+    background-image: url(/image/bulking_cover.jpg);
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.bulking-banner p{
+    color: white;
+    width: 20%;
+    height: 30%;
+    font-size: 5rem;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+
+.bulking-container{
+    height: 360vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bulking-text{
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    border-bottom: 5px solid white; 
+        
+}
+.maintain-banner{
+    height: 50vh;
+    background-image: url(/image/maintain_cover.jpg);
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.maintain-banner p{
+    color: white;
+    width: 20%;
+    height: 30%;
+    font-size: 5rem;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+
+.maintain-container{
+    height: 360vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.maintain-text{
+    
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    border-bottom: 5px solid white; 
+        
+}
+.plans-ban {
+    height: 50vh;
+    background-image: url(/image/plansb.png);
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+  
+.plans-ban p {
+    color: white;
+    font-size: 2.5rem;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: 2vh;
+}
+  
+.content-banner1 {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.name1 {
+    font-size: 3rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 1.5%;
+    border-bottom: 3px solid white;
+}
+.name1:hover{
+    color: yellow;
+    transition: ease .3s;
+}
+.name2:hover{
+    color: yellow;
+    transition: ease .3s;
+}
+.name3:hover{
+    color: yellow;
+    transition: ease .3s;
+}
+  
+.img1 {
+    margin-top: 2%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.img1 img {
+    width: 50%;
+    height: 90%;
+}
+  
+.content-banner2 {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.name2 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    padding: 1.5%;
+    border-bottom: 3px solid white;
+}
+  
+.img2 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5%;
+}
+  
+.img2 img {
+    width: 50%;
+    height: 90%;
+}
+  
+.content-banner3 {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.name3 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    padding: 1.5%;
+    border-bottom: 3px solid white;
+}
+  
+.img3 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5%;
+}
+  
+.img3 img {
+    width: 50%;
+    height: 90%;
+}
+
+.plans-title{
+    font-size: 3rem;
+    color: white;
+    height: 12vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.plan-banner{
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plan-banner p{
+    width: 50%;
+    color: white;
+    font-size: 2rem;
+}
+
+#cbum-banner{
+    background-image: url(/image/cbum-banner.jpg);
+}
+#ronnie-banner{
+    background-image: url(/image/ronniebanner.png);
+}
+#arnold-banner{
+    background-image: url(/image/arnoldbanner.png);
+}
+.plan-content{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plan-content img{
+    height: 80%;
+    width: 15%;
+}
+.plan-calendar{
+    height: 80%;
+    width: 45%;
+}
+.days-calendar{
+    display: flex;
+    height: 15%;
+}
+.days-calendar li{
+    color: white;
+    width: 10%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    cursor: pointer;
+    transition: ease .1s;
+    transition-delay: .1s;
+}
+#rest{
+    background-color: rgb(215, 3, 3);
+    color: white;
+}
+.calendar-container{
+    width: 100%;
+    height: 84%;
+    border: white 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.calendar-container p{
+    color: white;
+    width: 90%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.calendar-container ol{
+    width: 90%;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#day1{
+    background-color: white;
+    color: black;
+}
+#day2-container{
+    display: none;
+}
+#day3-container{
+    display: none;
+}
+#day4-container{
+    display: none;
+}
+#day5-container{
+    display: none;
+}
+#day6-container{
+    display: none;
+}
+#day7-container{
+    display: none;
+}
+
+
+footer{
+    color: white;
+    height: 10vh;
+    font-size: 2.5rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Shred";
+}
